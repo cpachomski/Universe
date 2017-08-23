@@ -4,6 +4,8 @@ import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
 import Welcome from "components/welcome";
 
+console.log(process);
+
 const render = Component => {
     ReactDOM.render(
         <AppContainer>
