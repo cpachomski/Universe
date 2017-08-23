@@ -1,4 +1,5 @@
 import express from "express";
-import html from "templates/html";
+import { renderToString } from "react-dom/server";
+import App from "components/root";
 
-console.log(html("hey", "title!"));
+import html from "templates/html";
