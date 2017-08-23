@@ -9,7 +9,10 @@
     "babel-core": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
+    "express": "^4.15.4",
     "lodash": "^4.17.4",
+    "morgan": "^1.8.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-hot-loader": "3.0.0-beta.7",
@@ -29,7 +32,8 @@
     "webpack-dev-server": "^2.7.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack/webpack.config.babel.js --color --inline --open --content-base",
+    "start": "node src/server/index.js",
+    "start:dev": "webpack-dev-server --config webpack/webpack.config.babel.js --color --inline --open --content-base",
     "build": "webpack -p --config webpack/webpack.config.babel.js"
   }
 }
