@@ -2,9 +2,7 @@ import "react-hot-loader/patch";
 import React from "react";
 import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
-import Welcome from "components/welcome";
-
-console.log(process);
+import Root from "components/root";
 
 const render = Component => {
     ReactDOM.render(
