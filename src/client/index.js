@@ -9,14 +9,14 @@ const render = Component => {
         <AppContainer>
             <Component />
         </AppContainer>,
-        document.getElementById("sauna")
+        document.getElementById("universe")
     );
 };
 
-render(Welcome);
+render(App);
 
 if (module.hot) {
-    module.hot.accept("./components/Welcome", () => {
-        render(Welcome);
+    module.hot.accept("./components/App", () => {
+        render(App);
     });
 }
