@@ -1,6 +1,6 @@
 import path from "path";
 
 export default {
-    filename: "scripts/[name].bundle.js",
+    filename: "js/[name].bundle.js",
     path: path.resolve(__dirname, "../../src/server/public")
 };

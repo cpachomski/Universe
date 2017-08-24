@@ -6,12 +6,12 @@ export default ({ body, title }) => {
     <html>
       <head>
         <title>${title}</title>
-        <link rel="stylesheet" href="/public/css/index.css" />
+        <link rel="stylesheet" href="/public/css/styles.css" />
       </head>
       <body>
-        <div id="root">${body}</div>
+        <div id="universe">${body}</div>
       </body>
-      <script src="/public/js/bundle.js"></script>
+      <script src="/public/js/app.bundle.js"></script>
     </html>
     `;
 };

@@ -1,10 +1,10 @@
 import React from "react";
-import Test from "components/test";
+import Welcome from "components/welcome";
 
 export default () => {
     return (
         <div>
-            <Test />
+            <Welcome />
         </div>
     );
 };
