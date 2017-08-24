@@ -36,10 +36,12 @@
     "webpack-dev-server": "^2.7.1"
   },
   "scripts": {
-    "start": "BABEL_ENV=server nodemon src/server/index.js",
-    "start:dev": "webpack-dev-server --config webpack/webpack.config.babel.js --color --inline --open --content-base",
+    "start": "BABEL_ENV=server node src/server/index.js",
+    "start:dev:server": "BABEL_ENV=server nodemon src/server/index.js & npm run watch:server",
+    "start:dev:client": "webpack-dev-server --config webpack/webpack.config.babel.js --color --inline --open --content-base",
     "build:client": "webpack -p --config webpack/webpack.config.babel.js",
     "build:server": "BABEL_ENV=server babel src/components --out-dir ./src/server/components",
+    "watch:server": "npm run build:client -- --watch & npm run  build:server -- --watch",
     "build": "npm run build:client & npm run build:server"
   }
 }
