@@ -1,3 +1,22 @@
 {
-    "presets": ["env", "react"]
+    "presets": ["env", "react"],
+    "env": {
+        "server": {
+            "plugins": [
+                [
+                    "css-modules-transform", 
+                    {
+                        "generateScopedName": "[hash:8]",
+                        "extensions": [".css"]
+                    }
+                ],
+                [
+                    "module-resolver",
+                    {
+                        "root": ["./src"],
+                    }   
+                ]
+            ]
+        }
+    }
 }
