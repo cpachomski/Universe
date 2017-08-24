@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "babel-core": "^6.26.0",
+    "babel-plugin-css-modules-transform": "^1.2.7",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.26.0",
@@ -20,7 +21,9 @@
   },
   "devDependencies": {
     "babel-loader": "^7.1.2",
+    "babel-plugin-module-resolver": "^2.7.1",
     "babel-preset-react": "^6.24.1",
+    "babel-resolver": "^1.1.0",
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.5",
     "ejs": "^2.5.7",
@@ -32,8 +35,9 @@
     "webpack-dev-server": "^2.7.1"
   },
   "scripts": {
-    "start": "node src/server/index.js",
+    "start": "BABEL_ENV=server node src/server/index.js",
     "start:dev": "webpack-dev-server --config webpack/webpack.config.babel.js --color --inline --open --content-base",
-    "build": "webpack -p --config webpack/webpack.config.babel.js"
+    "build:client": "webpack -p --config webpack/webpack.config.babel.js",
+    "build:server": "BABEL_ENV=server babel src/components --out-dir ./src/server/components"
   }
 }
