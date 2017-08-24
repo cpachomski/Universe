@@ -23,6 +23,6 @@ export default {
                 loader: "sass-loader"
             }
         ],
-        publicPath: path.resolve(__dirname, "../../dist")
+        publicPath: path.resolve(__dirname, "../../src/server/public")
     })
 };

@@ -1,3 +1,4 @@
+import path from "path";
 import express from "express";
 import React from "react";
 import { renderToString } from "react-dom/server";
@@ -6,6 +7,8 @@ import html from "templates/html";
 
 const server = express();
 const PORT = process.env.PORT || 3030;
+
+server.use(express.static(path.resolve(__dirname, "./public")));
 
 server.get("*", (req, res) => {
     const body = renderToString(<App />);

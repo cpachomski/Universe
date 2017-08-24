@@ -5,8 +5,7 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
     title: "Universe",
     template: path.resolve(__dirname, "../../src/templates/index.ejs"),
     rootId: "universe",
-    inject: "body",
-    filename: path.resolve(__dirname, "../../dist/index.html")
+    inject: "body"
 });
 
 export default HTMLWebpackPluginConfig;
